@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Mentor Details" icon-name="standard:case">
+        <div class="slds-var-m-around_small">
+            <template for:each={mentor.data} for:item="item">
+                <p key={item.Id}>
+                    {item.Name}
+                </p>
+            </template> 
+            
+            <template if:true={mentor.errors} >
+                <p>
+                    There is an Error while fetching the cases
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
